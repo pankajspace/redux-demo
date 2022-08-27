@@ -4,6 +4,7 @@
 - npm i nodemon -D
 - npm i immer -S
 - npm i redux-logger -S
+- npm i axios redux-thunk -S
 
 # git
 - git init
