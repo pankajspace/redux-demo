@@ -3,6 +3,7 @@
 - npm i redux -S
 - npm i nodemon -D
 - npm i immer -S
+- npm i redux-logger -S
 
 # git
 - git init
