@@ -2,9 +2,6 @@ const redux = require("redux");
 const thunkMiddleware = require("redux-thunk").default;
 const axios = require("axios");
 
-const createStore = redux.createStore;
-const applyMiddleware = redux.applyMiddleware;
-
 const FETCH_USERS = "FETCH_USERS";
 const FETCH_USERS_SUCCESS = "FETCH_USERS_SUCCESS";
 const FETCH_USERS_FAILURE = "FETCH_USERS_FAILURE";
@@ -76,7 +73,7 @@ const getUsers = () => {
   };
 };
 
-const store = createStore(reducer, applyMiddleware(thunkMiddleware));
+const store = redux.createStore(reducer, redux.applyMiddleware(thunkMiddleware));
 
 const unsubscribe = store.subscribe(() => {});
 
