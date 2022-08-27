@@ -1,9 +1,9 @@
-* steps
+# steps
 - npm init --y
 - npm i redux -S
 - npm i nodemon -D
 
-* git
+# git
 - git init
 - git add .
 - git commit -m "first commit"
