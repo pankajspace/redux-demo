@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "immer": "node immer-basics.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "immer": "^9.0.15",
     "redux": "^4.2.0"
   },
   "devDependencies": {

@@ -2,6 +2,7 @@
 - npm init --y
 - npm i redux -S
 - npm i nodemon -D
+- npm i immer -S
 
 # git
 - git init
