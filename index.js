@@ -1,4 +1,5 @@
 const redux = require("redux");
+const reduxLogger = require("redux-logger");
 
 // defining action
 const CAKE_ORDERED = "CAKE_ORDERED";
@@ -89,14 +90,15 @@ const rootReducer = redux.combineReducers({
   pizza: reducerPizza,
 });
 
-// creating store
-const store = redux.createStore(rootReducer);
+// middleware
+const logger = reduxLogger.createLogger();
+
+// creating store and applying middleware
+const store = redux.createStore(rootReducer, redux.applyMiddleware(logger));
 console.log("Initial state: ", store.getState());
 
 // subscribigng to store
-const unsubscribe = store.subscribe(() => {
-  console.log("Updated state: ", store.getState());
-});
+const unsubscribe = store.subscribe(() => {});
 
 // binding action creators
 const actions = redux.bindActionCreators(
